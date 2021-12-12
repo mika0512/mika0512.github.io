@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=MonteCarlo&family=Style+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=MonteCarlo&family=Signika+Negative&family=Style+Script&display=swap" rel="stylesheet">
+    <title>WEB222 Final Assessment - Fall 2021</title>
+    <script src="siteForm.js"></script>
+</head>
+<body>
+    <div class="mainPage">
+        <div class="content">
+            <div class="header">
+                <h1 id="main">WEB222 Final Assessment - Fall 2021</h1>
+                created by 
+                <p>Xiao Ling Zheng</p>
+            </div>
+
+            <div class="subContent1">
+                <div class="imageMyPhoto">  
+                    <img src="photoofme.jpg" alt="lks" class="image">
+                </div>
+                <h2>Xiao Ling Zheng</h2>
+                <p>Seneca Student</p>
+                <button type="button" class="resumeButton">
+                    <a href="resume.pdf" download>Resume</a></li> 
+                </button>
+                <a href="#contact"><input type="button" class="contactMeButton" value="Contact Me"></a>
+            </div>
+
+            <div class="subContent2">
+                <div class="aboutContainer">
+                    <div class="aboutMe">    
+                        <h2 id="aboutMe">About Me</h2>
+                        <p>Hi,my name is Xiao Ling Zheng and I am currently a student from Seneca. I am in second year of the CPA program. This is my first time learning computer programming. It is very interesting and a great skill to be used in the future. I am currently working part time as a real estate agent and I hope I can use both skills in the future to further develop my career. </p>
+                    </div>      
+                </div>  
+                <div class="BasicInfo">
+                    <table>  
+                        <thead>
+                            <tr><th><h2>Basic Information</h2></th></tr>
+                          <tr><th>EMAIL: </th><th>xlzheng@myseneca.ca</th></tr>
+                          <tr><th>LANGUAGE:</th><th>English, Cantonese, Mandarin</th></tr>
+                          <tr><th>Hobby </th><th>Yoga, Reading & Singing</th></tr>
+                        </thead>  
+                    </table>
+                </div>
+            </div>
+
+            <div class="subContent3">
+                <div class="educationContainer">
+                    <div class="educationHeader">
+                        <h2 id="education">Education</h2>
+                    </div>
+                    <div class="eduItem">
+                        <div class="itemLeft">
+                            <p>2021 - 2023(expected)</p>
+                            <h2>Advanced Diploma's Degree</h2>
+                        </div>
+                        <div class="itemRight">
+                            <h2>Ontario College Diploma</h2>
+                            <p>Seneca College</p>
+                            <p>Computer Promgramming & Analysis</p>
+                        </div>
+                    </div>
+                    <div class="eduItem">
+                        <div class="itemLeft">
+                            <p>2020-2021</p>
+                            <h2>Real Estate Agent License</h2>
+                        </div>
+                        <div class="itemRight">
+                            <h2>Real Estate Agent License</h2>
+                            <p>Humber College</p>
+                            <p>Real Estate Education</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subContent4">
+                <div class="formContainer">
+                    <form id="form" method="POST" action="https://httpbin.org/post" name="form" onsubmit="return validateForm();">
+                        <h1 id="contact">Contact Me</h1>  
+                        <label for="entry1">Name:</label><br>
+                        <input id="entry1" type="text" name="name" placeholder="Your name goes here" required>
+                        <br>
+                        <label for="entry2">Email Address:</label><br>
+                        <input id="entry2" type="email" name="email" placeholder="Email address goes here" required>
+                        <br>
+                        <label for="entry3">Address:</label><br>
+                        <input id="entry3" type="text" name="address" placeholder="Your Address goes here" required>
+                        <br>
+                        <label for="entry4">City:</label><br>
+                        <input id="entry4" list="cities" type="text" name="cities" autocomplete="off" laceholder="Choose your city" required>
+                        <datalist name="cities" id="cities">
+                            <option value="Toronto"></option>
+                            <option value="Vancouver"></option>
+                            <option value="Edmonton"></option>
+                            <option value="Calgary"></option>
+                            <option value="Saskatoon"></option>
+                            <option value="Regina"></option>
+                            <option value="Winnipeg"></option>
+                            <option value="Ottwa"></option>    
+                            <option value="Montreal"></option> 
+                            <option value="Halifax"></option>   
+                        </datalist>  
+                        <br>   
+                        <label for="entry5">Postal Code:</label><br>  
+                        <input id="entry5" type="text" name="PostalCode" placeholder="Only A1A 1A1 format" required  
+                        pattern="^[ABCEGHJKLMNPRSTVXY][0-9][A-Z] [0-9][A-Z][0-9]$">  
+                        <br> 
+                        <input id="question" type="radio" name="option" value="question" onclick="radioOption();">
+                        <label for="question">Question</label><br>
+                        <input id="comment" type="radio" name="option" value="comment" onclick="radioOption();">
+                        <label for="question">Comment</label><br>
+                        <input id="hiring" type="radio" name="option" value="hiring" onclick="radioOption();">
+                        <label for="question">Hiring</label><br>
+                        <br> 
+                        <textarea id="textBox" class="textbox" name="textBox"></textarea>   
+                        <div id="hiringForm" style="display: none;">                          
+                            <label>Hourly rate: </label><br>                          
+                            <input type="number" name="hourly">                           
+                        </div>                       
+                        <input class="reset" id="reset" type="reset" value="Reset">                   
+                        <input class="submit" id="submit" type="submit" value="Submit">          
+                    </div>     
+                </div> 
+                <div class="subContent5">
+                    <div class="myMenu">
+                        <a href="#main">Main</a>
+                        <a href="#aboutMe">About Me</a>
+                        <a href="#education">Education</a>
+                        <a href="#contact">Contact Me</a>
+                    </div>
+                </div>
+            </div>
+        </div> 
+       
+
+    </body>
+</html>
